@@ -1,0 +1,17 @@
+table{
+    width: 100%;
+    border: solid;
+    border-spacing: 0px;
+}
+tr:first-child{
+    background-color: #CCCCCC;
+}
+tr:nth-child(odd):not(tr:first-child){
+    background-color: #ffffff;
+}
+tr:nth-child(even){
+    background-color: #caf7ff;
+}
+tr:hover:not(tr:first-child):not(tr:last-child){
+    background-color: yellow;
+}
