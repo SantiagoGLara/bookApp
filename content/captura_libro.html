@@ -1,27 +1,14 @@
-<?php
-
-//consulta para el tipo de libro
-$consulta="SELECT id, tipo from tipo";
-$result=bd_consulta($consulta);
-
-// Consulta para autores
-$consulta="SELECT id,nombre FROM autor ";
-$result2=bd_consulta($consulta);
-
-//consulta para editoriales
-$consulta="SELECT id,editorial from editorial";
-$resultEditoriales=bd_consulta($consulta);
-
-//consulta para países
-$consulta="SELECT id,nombre from pais";
-$resultPaises=bd_consulta($consulta);
-
-//consulta para el idioma
-$consulta="SELECT id,lenguaje from lenguaje";
-$resultLenguajes=bd_consulta($consulta);
-
-
- ?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Captura de un libro</title>
+    <link rel="stylesheet" href="formulario_libro.css">
+  </head>
+  <body>
+    <header>
+      <h1>Formulario de Captura</h1>
+    </header>
     <form class="" action="respuesta.html" method="post">
       <div class="dato">
         <div class="etiqueta">
@@ -31,18 +18,25 @@ $resultLenguajes=bd_consulta($consulta);
           <input type="text" name="titulo" value="">
         </div>
       </div>
-
-
-
       <div class="dato">
         <div class="etiqueta">
           <label for="tipo">Tipo de libro de acuerdo al contenido:</label>
         </div>
         <div class="control">
           <select class="" name="tipo">
-            <?php while($row=mysqli_fetch_assoc($result)){ ?>
-                <option value="<?= $row['id'] ?>"><?= $row['tipo'] ?></option>
-            <?php } ?>
+            <option value="1">Científico</option>
+            <option value="2">Litertarura</option>
+            <option value="3">De viaje</option>
+            <option value="4">Biografías</option>
+            <option value="5">Libro de texto</option>
+            <option value="6">De referencia</option>
+            <option value="7">Monografías</option>
+            <option value="8">Recreativos</option>
+            <option value="9">Poéticos</option>
+            <option value="10">Juveniles</option>
+            <option value="11">Ficción</option>
+            <option value="12">Comedia</option>
+            <option value="99">Otro</option>
           </select>
         </div>
       </div>
@@ -51,11 +45,7 @@ $resultLenguajes=bd_consulta($consulta);
           <label for="autor">Autor:</label>
         </div>
         <div class="control">
-          <select class="" name="tipo">
-            <?php while($row=mysqli_fetch_assoc($result2)){ ?>
-                <option value="<?= $row['id'] ?>"><?= $row['nombre'] ?></option>
-            <?php } ?>
-          </select>
+          <input type="text" name="autor" value="">
         </div>
       </div>
       <div class="dato">
@@ -63,13 +53,7 @@ $resultLenguajes=bd_consulta($consulta);
           <label for="editorial">Editorial:</label>
         </div>
         <div class="control">
-          <select class="" name="editorial">
-          <?php
-            while($row2=mysqli_fetch_assoc($resultEditoriales)){
-           ?>
-            <option value="<?= $row2['id'] ?>"><?= $row2['editorial'] ?></option>
-          <?php } ?>
-          </select>
+          <input type="text" name="editorial" value="">
         </div>
       </div>
       <div class="dato">
@@ -186,3 +170,5 @@ $resultLenguajes=bd_consulta($consulta);
         </div>
       </div>
     </form>
+  </body>
+</html>

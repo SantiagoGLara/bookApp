@@ -1,20 +1,17 @@
 table{
-    width: 100%;
-    border: solid;
-    border-spacing: 0px;
+  width:100%;
+  border:solid 1px;
+  border-spacing:0px;
 }
 tr:first-child{
-    background-color: #CCCCCC;
+  background-color:#CCCCCC;
 }
 tr:nth-child(odd):not(tr:first-child){
-    background-color: #ffffff;
+  background-color:#FFFFFF;
 }
 tr:nth-child(even){
-    background-color: #caf7ff;
+  background-color: #CAF7FF;
 }
 tr:hover:not(tr:first-child):not(tr:last-child){
-    background-color: yellow;
-}
-*{
-    display:grid;
+  background-color: yellow;
 }
