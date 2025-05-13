@@ -15,3 +15,6 @@ tr:nth-child(even){
 tr:hover:not(tr:first-child):not(tr:last-child){
     background-color: yellow;
 }
+*{
+    display:grid;
+}

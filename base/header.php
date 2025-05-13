@@ -1,6 +1,6 @@
 <?php include('bd.php'); ?>
-<?php include('session.php'); ?>
-<?php // include('global.php'); ?>
+<?php include "session.php" ?>
+<?php include "global.php" ?>
 
 <header>
     <h1>Book Marketing App</h1>

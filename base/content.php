@@ -1,12 +1,12 @@
 <?php
 $option=$_GET['op']??'10';
 switch($option){
-    	case '10':include'../content/books_list.php';
+    	case '10':include('../content/books_list.php');
         break;    
-    	case '11':include'../content/book_new.php';
+    	case '11':include('../content/book_new.php');
         break;
-    	case '12':include'books_modify.php';
+    	case '12':include('../content/book_modify.php');
         break;
-    	case '13':include'books_delete.php';
+        case '13':include('../content/book_delete.php');
         break;
 }
